@@ -1,24 +1,18 @@
 from contextlib import contextmanager
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
-import os
 from constants import (
     PAC_URL,
     PAC_STORE_USER_MAIL,
     PAC_STORE_USER_PASSWORD,
 )
-
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import requests, os, logging, time
-from faker import Faker
-import pandas as pd
-from selenium.webdriver.common.keys import Keys
+import os, time
 import logging
+
 
 
 
