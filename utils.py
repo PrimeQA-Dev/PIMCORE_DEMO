@@ -37,13 +37,11 @@ def services_context_wrapper(screenshot=None):
         # driver = webdriver.Chrome()
         yield driver
     except Exception:
-        logging.info(f"End for {testcase_id[0]}")
         if screenshot:
             driver.save_screenshot(screenshot)
         raise
     finally:
         logging.info(f"End for {testcase_id[0]}")
-        logging.info(os.getcwd())
         driver.quit()
 
 
